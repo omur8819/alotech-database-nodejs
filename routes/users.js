@@ -5,5 +5,7 @@ const usersController = require("../controllers/usersController")
 
 /* GET users listing. */
 router.get('/', usersController.get_users);
+router.get('/add', usersController.add_user);
+
 
 module.exports = router;

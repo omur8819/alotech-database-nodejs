@@ -13,3 +13,7 @@ exports.get_users = async (req, res, next) => {
     res.send("An error occured")
   }
 };
+
+exports.add_user = (req, res) => {
+  res.render('addUser')
+}
