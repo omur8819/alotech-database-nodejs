@@ -1,27 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://image.freepik.com/free-vector/abstract-wave-background-soft-design_41084-386.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
 
-.navbar-brand { position: relative; z-index: 2; }
+/* Navbar styling */
+.container-fluid {
+    padding: 0;
+}
+.navbar {
+    border-radius: 0;
+    background-color: black;
+    border: 0;
+    
+}
+.brand-image {
+    height: 4rem;
+    width: auto;
+    margin: auto;
 
-.navbar-nav.navbar-right .btn { position: relative; z-index: 2; padding: 4px 20px; margin: 10px auto; }
+}
+.navbar-brand {
+    margin-left: 5px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar.navbar-inverse .nav-collapse { 
+    background-color: #222; 
+}
+.btn.btn-circle { 
+    border-radius: 50px;
+}
+.btn.btn-outline { 
+    background-color: transparent; 
+}
 
-.navbar .navbar-collapse { position: relative; }
-.navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 22px; }
-
-.navbar .nav-collapse { position: absolute; z-index: 1; top: 0; left: 0; right: 0; bottom: 0; margin: 0; padding-right: 120px; padding-left: 80px; width: 100%; }
-.navbar.navbar-default .nav-collapse { background-color: #f8f8f8; }
-.navbar.navbar-inverse .nav-collapse { background-color: #222; }
-.navbar .nav-collapse .navbar-form { border-width: 0; box-shadow: none; }
-.nav-collapse>li { float: right; }
-
-.btn.btn-circle { border-radius: 50px; }
-.btn.btn-outline { background-color: transparent; }
-
+/* table styling */
 .custab{
     border: 1px solid #ccc;
     padding: 5px;
     margin: 5% 0;
     box-shadow: 3px 3px 2px #ccc;
     transition: 0.5s;
-    
     }
 .custab:hover{
     box-shadow: 3px 3px 0px transparent;

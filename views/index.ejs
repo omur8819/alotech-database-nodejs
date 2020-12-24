@@ -1,35 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alotech</title>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  <link rel="stylesheet" href="../public/stylesheets/style.css">
-</head>
-<body>
-<!------ Include the above in your HEAD tag ---------->
-  <div class="container-fluid">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alotech</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+  </head>
+  <body>
+    <div class="container-fluid">
       <!-- Second navbar for profile settings -->
       <nav class="navbar navbar-inverse">
         <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">Brand</a>
+            <a class="navbar-brand" href="/">
+              <img class="brand-image" src="/images/alo-tech.png" alt="brand logo"/>
+            </a>
           </div>
-      
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="/">Home</a></li>
-              <li><a href="/users">Users</a></li>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/users">Users</a>
+              </li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
       </nav><!-- /.navbar -->
-  </div><!-- /.container-fluid -->
+    </div><!-- /.container-fluid -->
+  
+    <!-- Landing page -->
+    <div class="row">
+      <div class="col-md-4">
+          <!-- begin panel group -->
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <!-- panel 1 -->
+              <div class="panel panel-default">
+                  <!--wrap panel heading in span to trigger image change as well as collapse -->
+                  <span class="side-tab" data-target="#tab1" data-toggle="tab" role="tab" aria-expanded="false">
+                      <div class="panel-heading" role="tab" id="headingOne"data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <h2 class="panel-title">Türkiye’nin En Büyük Çağrı Merkezi Bulutu!</h2>
+                      </div>
+                  </span>
+                  
+                  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="panel-body">
+                      <!-- Tab content goes here -->
+                      AloTech, müşterilerine çağrı merkezi hizmeti sunmak isteyen işletmelere tüm çağrı merkezi fonksiyonlarını internet üzerinden ‘’hizmet’’ olarak sunmayı hedefleyen bir teknoloji şirketidir.
+                      </div>
+                  </div>
+              </div> 
+          </div> <!-- / panel-group --> 
+      </div> <!-- /col-md-4 -->
+      <div class="col-md-8 col-sm-12 col-offset-2">
+          <!-- begin macbook pro mockup -->
+          <div class="md-macbook-pro md-glare">
+              <div class="md-lid">
+                  <div class="md-camera"></div>
+                  <div class="md-screen">
+                  <!-- content goes here -->                
+                      <div class="tab-featured-image">
+                          <div class="tab-content">
+                              <div class="tab-pane  in active" id="tab1">
+                                  <img src="/images/landing-img.jpg" alt="tab1" class="img img-responsive">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            <div class="md-base"></div>
+          </div> <!-- end macbook pro mockup -->
+      </div> <!-- / .col-md-8 -->
+  </div> <!--/ .row -->
 
 </body>
 </html>
