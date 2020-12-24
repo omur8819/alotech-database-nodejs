@@ -36,7 +36,7 @@
       <div class="row col-md-12 custyle">
       <table class="table table-striped custab">
       <thead>
-      <a href="#" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new users</a>
+      <a href="/users/add" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new users</a>
           <tr>
               <th>ID</th>
               <th>First Name</th>
@@ -65,7 +65,7 @@
               <span class="glyphicon glyphicon-edit"></span> 
                 Edit
               </a> 
-              <a href="#" class="btn btn-danger btn-xs">
+              <a href="/users/<%= user.id %>/delete" class="btn btn-danger btn-xs">
                 <span class="glyphicon glyphicon-remove"></span>
                   Del
               </a>

@@ -28,9 +28,11 @@ const UserModel = sequelize.define(
         //attributes
         firstName: {
             type: DataTypes.STRING,
+            allowNull: false,
         },
         lastName: {
             type: DataTypes.STRING,
+            allowNull: false,
         },
       
     },
