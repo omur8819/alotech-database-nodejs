@@ -12,6 +12,8 @@ const {
 const sequelize = new Sequelize(
     `postgres://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOSTNAME}:${DB_PORT}/${DB_NAME}`
 );
+
+
   
 sequelize
     .authenticate()
@@ -19,19 +21,20 @@ sequelize
     .catch((error) => console.log("Unable to connect to database", error))
 
 //ORM Table
-//recruiter table in the postgres database
+//userTable table in the postgres database
 const UserModel = sequelize.define(
     "recruiter",
     {
         //attributes
-        FirstName: {
+        firstName: {
             type: DataTypes.STRING,
         },
-        LastName: {
+        lastName: {
             type: DataTypes.STRING,
-        } 
-
+        },
+      
     },
+    
     
     
     )
