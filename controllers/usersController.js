@@ -8,10 +8,8 @@ exports.get_users = async (req, res, next) => {
       order: [
         ['id', 'ASC'],
       ]
-    })
-   
+    });
     res.render('users', {userList});
-    
   } catch (error) {
     res.send("An error occured")
   }
@@ -20,7 +18,7 @@ exports.get_users = async (req, res, next) => {
 //get reuest
 exports.show_add_user_form = (req, res) => {
   res.render('addUser', {user: undefined })
-}
+};
 
 //post request
 exports.add_user = async (req, res) => {
@@ -29,20 +27,26 @@ exports.add_user = async (req, res) => {
     const newUser = await UserModel.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
+      userName: req.body.userName,
+      birthDate: req.body.birthDate,
+      email: req.body.email,
+      description: req.body.description,
+      imgUrl: req.body.imgUrl,
+      createdAt: req.body.createdAt,
+      updatedAt: req.body.updatedAt,
     });
   res.redirect('/users')
   } catch (error) {
-    res.send("An error occured..")
+    res.send("All text field must be filled")
   }
 };
 //on delete request
 exports.delete_user =async (req, res) => {
- 
   try {
     await UserModel.destroy({
       where:{
         id :  req.params.id,
-      }
+      },
     });
     res.redirect("/users")
   } catch (error) {
@@ -63,7 +67,6 @@ exports.show_edit_user_page = async (req, res) => {
     res.render("addUser", {user})
   } catch (error) {
     res.send("An error occured")
-    
   }
 };
 
@@ -71,15 +74,21 @@ exports.edit_user = async (req, res) => {
   let updatedObject = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
+    userName: req.body.userName,
+    birthDate: req.body.birthDate,
+    email: req.body.email,
+    description: req.body.description,
+    imgUrl: req.body.imgUrl,
   };
   try {
-    let result = await UserModel.update(updatedObject, {
-      returning: true,
-      where: {id: req.params.id}
+    await UserModel.update(updatedObject, {
+      where: {
+        id: req.params.id
+      }
     });
     res.redirect("/users")
   } catch (error) {
     res.send("An error occured.")
-    
   }
-}
+};
+

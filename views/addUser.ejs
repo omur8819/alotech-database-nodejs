@@ -15,44 +15,84 @@
 	</head>
 	<body>
 		<div class="container ">
-			<div class="row main ">
+			<div class="row main col-sm-12 col-md-4 col-md-offset-4">
 				<div class="panel-heading">
 	               <div class="panel-title text-center">
-					<h1 class="title"><% if(user){ %> Update User <% } else { %> Add new User <% } %></h1>
-	               		<hr />
+					<h1 class="title"><% if(user){ %> Update User <% } else { %> Add New User <% } %></h1>
+	               		<hr/>
 	               	</div>
 	            </div> 
 				<div class="main-login main-center">
-					<form class="form-horizontal" method="post" action=<% if(user){ %> <%"=/users/:user.id/edit"%> <% } else { %> "/users/add" <% } %>>
+					<form class="form-horizontal" method="post" action=<% if(user){ %> <%"/users/add"%> <% } else { %> "/users/add" <% } %>>
 						<div class="form-group">
-							<label for="name" class="cols-sm-2 control-label">First Name</label>
+							<label for="firstName" class="cols-sm-2 control-label">First Name</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="firstName" id="firstName"  placeholder="Enter First Name" value=<% if(user){ %> <%= user.firstName %> <% } else { %> "" <% } %> />
+									<input type="text" class="form-control" name="firstName" id="firstName"  placeholder="Enter First Name" value=<% if(user){ %> <%= user.firstName %> <% } else { %> "" <% } %> required/>
 								</div>
 							</div>
 						</div>
-
 						<div class="form-group ">
-							<label for="username" class="cols-sm-2 control-label">Last Name</label>
+							<label for="lastName" class="cols-sm-2 control-label">Last Name</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="lastName" id="lastName"  placeholder="Enter Last Name" value=<% if(user){ %> <%= user.lastName %> <% } else { %> "" <% } %>/>
+									<input type="text" class="form-control" name="lastName" id="lastName"  placeholder="Enter Last Name" value=<% if(user){ %> <%= user.lastName %> <% } else { %> "" <% } %> required/>
 								</div>
 							</div>
 						</div>
-
 						<div class="form-group ">
-							<button type="submit" class="btn btn-primary btn-lg btn-block login-button"> <% if(user){ %> Update <% } else { %> Add <% } %></button>
+							<label for="username" class="cols-sm-2 control-label">User Name</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="userName" id="userName"  placeholder="Enter User Name" value=<% if(user){ %> <%= user.userName %> <% } else { %> "" <% } %> required/>
+								</div>
+							</div>
 						</div>
-			
+						<div class="form-group ">
+							<label for="birthDate" class="cols-sm-2 control-label">Birthdate</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<input type="date" class="form-control" name="birthDate" id="birthDate"  placeholder="Enter Birthday" value=<% if(user){ %> <%= user.birthDate %> <% } else { %> "" <% } %> required/>
+								</div>
+							</div>
+						</div>
+						<div class="form-group ">
+							<label for="email" class="cols-sm-2 control-label">Email</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<input type="email" class="form-control" name="email" id="email"  placeholder="Enter email" value=<% if(user){ %> <%= user.email %> <% } else { %> "" <% } %> required/>
+								</div>
+							</div>
+						</div>
+						<div class="form-group ">
+							<label for="description" class="cols-sm-2 control-label">Description</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="description" id="description"  placeholder="Enter Description" value=<% if(user){ %> <%= user.description %> <% } else { %> "" <% } %> required/>
+								</div>
+							</div>
+						</div>
+						<div class="form-group ">
+							<label for="imgUrl" class="cols-sm-2 control-label">Image URL</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<input type="url" class="form-control" name="imgUrl" id="imgUrl"  placeholder="Enter Image URL" value=<% if(user){ %> <%= user.imgUrl %> <% } else { %> "" <% } %> required/>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-md-6 ">
+							<button type="submit" class="btn btn-primary btn-lg btn-block login-button "> <% if(user){ %> Update <% } else { %> Add <% } %></button>
+						</div>
 					</form>
 				</div>
 			</div>
-		</div>
-
-		
+		</div>	
 	</body>
 </html>

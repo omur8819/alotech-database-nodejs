@@ -13,8 +13,6 @@ const sequelize = new Sequelize(
     `postgres://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOSTNAME}:${DB_PORT}/${DB_NAME}`
 );
 
-
-  
 sequelize
     .authenticate()
     .then(() => console.log("Successfully connected to database"))
@@ -34,11 +32,27 @@ const UserModel = sequelize.define(
             type: DataTypes.STRING,
             allowNull: false,
         },
-      
-    },
-    
-    
-    
+        userName: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        birthDate: {
+            type: DataTypes.DATE,
+            allowNull: false,
+        },
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        description: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        imgUrl: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },      
+    }, 
     )
 
-    module.exports = UserModel;
+module.exports = UserModel;
