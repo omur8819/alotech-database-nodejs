@@ -10,7 +10,7 @@ const {
     DB_NAME } = process.env;
   
 const sequelize = new Sequelize(
-    `postgres://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOSTNAME}:${DB_PORT}/${DB_NAME}`
+    `postgres://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOSTNAME}/${DB_NAME}`
 );
 
 sequelize
