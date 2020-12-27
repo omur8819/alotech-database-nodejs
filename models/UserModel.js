@@ -10,7 +10,7 @@ const {
     DB_NAME } = process.env;
   
 const sequelize = new Sequelize(
-    `postgres://pfjcungodbpgwe:0dcb0daf2e9353a02e8f3b5e8825bfa2852947448784bfae9867c7e68a0235bd@ec2-54-247-71-245.eu-`
+    `postgres://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOSTNAME}:${DB_PORT}/${DB_NAME}`
 );
 
 sequelize
@@ -51,7 +51,8 @@ const UserModel = sequelize.define(
         imgUrl: {
             type: DataTypes.STRING,
             allowNull: false,
-        },      
+        },
+        
     }, 
     )
 
