@@ -3,7 +3,7 @@ Information Measurement Project
 
 * This Project can be reached [https://alotechnodejs.herokuapp.com/](https://alotechnodejs.herokuapp.com/)
 
-It is a set of operations we get servers to execute 
+It is a set of operations, getting servers to execute 
 
 * Create (POST) - Add user
 * Read (GET)- Get User
