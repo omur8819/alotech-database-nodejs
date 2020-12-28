@@ -1,6 +1,8 @@
 # alotech-database-nodejs
 Information Measurement Project
 
+* This Project can be reached [](https://alotechnodejs.herokuapp.com/)
+
 It is a set of operations we get servers to execute 
 
 * Create (POST) - Make somethin
@@ -35,10 +37,17 @@ npm install ejs --save
 * used <b>sequlize</b> package in order to connect <b>POSTGRESQL</b> with PGADMIN
 * This project deployment to HEROKU CLOUD system
 
-# designed by using MVC construction
+# Designed by using MVC construction
 | MODEL | VIEW | CONTROLLER |
 |---| --- | --- |
 | PostgreSQL | EJS | EXPRESS.JS |
 
+# Landing Page with Home/Users Link
 ![](Readme-Images/Landing.png)
+
+# Users Table could be edited/added/deleted
+![](Readme-Images/userstable.png)
+
+# Add user form into database
+![](Readme-Images/addusers.png)
 
