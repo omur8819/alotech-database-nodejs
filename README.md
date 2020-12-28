@@ -40,5 +40,5 @@ npm install ejs --save
 |---| --- | --- |
 | PostgreSQL | EJS | EXPRESS.JS |
 
-![](Readme-Images/FireShot Capture 009 - Alotech - alotechnodejs.herokuapp.com.png)
+![](Readme-Images/Landing.png)
 
