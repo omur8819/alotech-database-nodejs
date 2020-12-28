@@ -21,7 +21,7 @@ npm install nodemon --save-dev
 npx express-generator
 npm install ejs --save
 ```
-# Installed dependcies packages
+# Installed dependencies packages
 - "cookie-parser": "^1.4.5",
 - "debug": "^2.6.9",
 - "dotenv": "^8.2.0",
