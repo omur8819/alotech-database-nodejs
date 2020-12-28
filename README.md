@@ -5,10 +5,10 @@ Information Measurement Project
 
 It is a set of operations we get servers to execute 
 
-* Create (POST) - Make somethin
-* Read (GET)- Get something
-* Update (PUT) - Change something
-* Delete (DELETE)- Remove something
+* Create (POST) - Add user
+* Read (GET)- Get User
+* Update (PUT) - Change User Information
+* Delete (DELETE)- Remove User
 
 # Node and Express Js installed
 ``` 
