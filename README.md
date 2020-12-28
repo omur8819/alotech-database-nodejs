@@ -1,7 +1,7 @@
 # alotech-database-nodejs
 Information Measurement Project
 
-* This Project can be reached [HEROKU LINK](https://alotechnodejs.herokuapp.com/)
+* This Project can be reached [https://alotechnodejs.herokuapp.com/](https://alotechnodejs.herokuapp.com/)
 
 It is a set of operations we get servers to execute 
 
