@@ -35,7 +35,7 @@ npm install ejs --save
 
 ## Connect to database
 * used <b>sequlize</b> package in order to connect <b>POSTGRESQL</b> with PGADMIN
-* This project deployment to HEROKU CLOUD system
+* This project deployment to [HEROKU CLOUD](https://www.heroku.com/) system
 
 ## Designed by using MVC construction
 | MODEL | VIEW | CONTROLLER |
